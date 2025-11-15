@@ -7,19 +7,28 @@
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
-    <header>
-        <h1>Login</h1>
-    </header>
     <main>
-       <form action="cadastro.php" method="post"autocomplete="on">
-             <label for="iemail">Email</label>
-             <input type="email" name="email" id="iemail">
-             <label for="isenha">Senha</label>
-             <input type="password" name="senha" id="isenha">
-             
-             <input type="submit" value="entrar">
-             <input type="reset" value="deletar">
-       </form>
+        <section id="Login">
+            <div class="form">
+                <h1>Login</h1>
+               <form action="cadastro.php">
+                 <div class="campo">
+                     <label for="iemail">Email:</label>
+                     <input type="email" name="email" id="iemail" required autocomplete="email" maxlength="30" placeholder="coloque seu e-mail"> 
+                 </div>
+
+                 <div class="campo">
+                     <label for="isenha">Senha:</label>
+                     <input type="password" name="senha" id="isenha" required autocomplete="current-password" minlength="8" maxlength="20" placeholder="coloque sua senha">
+                 </div>
+
+                 <div class="esqueci">
+                     <input type="submit" value="entrar">
+                     <a href="#">Esquecia a senha</a>
+                 </div>
+               </form>
+            </div>
+        </section>
     </main>
 </body>
 </html>
